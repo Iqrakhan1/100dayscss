@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manuplation</title>
+</head>
+<style>
+    body{background:#212121;
+    color:#fff;
+    height:100%;
+   
+    }
+    .main{
+        height: 660px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        margin: 10px;
+         width:200px;
+         height:200px;
+         border-radius:50%;
+         border: 2px solid rgb(3, 3, 3);
+         box-shadow: 2px 2px 2px rgba(248, 247, 247, 0.5);
+ 
+    }
+    #blue{
+        background-color:blue;
+    }
+    #green{
+        background-color:green;
+    }
+    #red{
+        background-color:red;
+    }
+    #yellow{
+        background-color:yellow;
+    }
+    #black{
+        background-color:black;
+        
+    }
+    #white{
+        background-color:white;
+    }
+</style>
+<body>
+   <div class="main">
+    <div class="box" id="blue"></div>
+    <div class="box" id="green"></div>
+    <div class="box" id="red"></div>
+    <div class="box" id="yellow"></div>
+    <div class="box" id="black"></div>
+    <div class="box" id="white"></div>
+   </div> 
+</body>
+<script>
+   const boxs = document.querySelectorAll(".box");
+   boxs.forEach(function(box){
+    console.log(box);
+    box.addEventListener("click", function(event){
+        if(event.target.id==="blue"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+        else if(event.target.id==="green"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+        else if(event.target.id==="red"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+        else if(event.target.id==="yellow"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+        else if(event.target.id==="black"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+        else if(event.target.id==="white"){
+            document.body.style.backgroundColor=event.target.id;
+        }
+    })
+   })
+  
+</script>
+</html>
